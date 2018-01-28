@@ -1,0 +1,11 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'duku/style.css' %}" />
+{% if armada %}
+    <ul>
+    {% for cruiser in armada %}
+        <li><a href="{% url 'duku:flagship' cruiser.id %}">{{ cruiser.cruiser_class</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No siths are available.</p>
+{% endif %}

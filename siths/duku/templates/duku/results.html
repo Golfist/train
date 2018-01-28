@@ -1,0 +1,9 @@
+<h1>{{ cruiser.cruiser_class }}</h1>
+
+<ul>
+{% for weapon in cruiser.weapon_set.all %}
+    <li>{{ weapon.weapon_parametrs }} -- {{ weapon.shot }} instructions{{ weapon.shot|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'duku:flagship' cruiser.id %}">Shot again</a>

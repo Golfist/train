@@ -1,0 +1,12 @@
+<h1>{{ cruiser.cruiser_class }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'duku:instructions' cruiser.id %}" method="post">
+{% csrf_token %}
+{% for weapon in cruiser.weapon_set.all %}
+    <input type="radio" name="weapon" id="weapon{{ forloop.counter }}" value="{{ weapon.id }}" />
+    <label for="weapon{{ forloop.counter }}">{{ weapon.weapon_parametrs }}</label><br />
+{% endfor %}
+<input type="submit" value="Instructions" />
+</form>
