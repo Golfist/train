@@ -1,1 +1,2 @@
-Hi, man, something weird
+<<<<<<< HEAD
+Hi, man its weird life
