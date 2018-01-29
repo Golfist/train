@@ -1,1 +1,1 @@
-Hi, man
+Hi, man, its of life
